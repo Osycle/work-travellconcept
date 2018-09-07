@@ -7,7 +7,7 @@
 
 //--bnr-slider
 .bnr-slider{
-	$slider-height: 640px;
+	$slider-height: 520px;
 	position: relative;
 	overflow: hidden;
 	.flickity-slider{
@@ -44,7 +44,9 @@
 			}
 		}
 	}
-
+	p{
+		line-height: 200%;
+	}
 	.carousel-content{
 		.pie-flex-center{
 			height: $slider-height;
@@ -117,282 +119,131 @@
 
 
 
-//--short-partners
-.short-partners{
+//short-popular
+.short-popular-items{
+	figure{
+		//margin-left: -1px;
+		position: relative;
+	}
 	.wrapper{
-		padding: 10px 60px;
-		border-radius: 30px;
-		background-color: white;
+		padding: 1px;
 	}
-	.flickity-btn-1{
-
-		.previous{
-			left: -30px;
+	h3{
+		font-weight: 500;
+	}
+	.hover-content{
+		overflow: hidden;
+		//padding-top: 1px;
+		.img, .cell-hover{
+			transition: all 0.6s steps(30);
 		}
-		.next{
-			right: -30px;
+		.cell-hover{
+			background-color: rgba($color-2, 0.4);
 		}
-	}
-
-}
-.short-partners-items{
-	.img-content{
-		transition: all 0.3s ease;
-	}
-	.is-selected{
-		.img-content{
-			transform: scale(1.1);
-			filter: brightness(110%);
+		&:hover{
+			.img{
+				transform: scale(1.1);
+				filter: contrast(120%) blur(5px);
+			}
 		}
 	}
 	.img{
-		height: 120px;
-		background-size: contain;
+
 		background-position: center;
+		background-size: cover;
+		height: 256px;
 	}
 }
 
-
-
-
-//column-1
-.column-1{
-	border-radius: 30px;
-}
-.sitebar{
-	background-color: white;
-	border-radius: 15px;
-	//padding: 10px 0;
-	ul{
-		color: $color-1;
-		li{
-			font-weight: 600;
-			border-bottom: 1px solid rgba(black, 0.2);
-			&:last-child{
-				border-bottom: none;
+//short-place
+.short-place{
+	.entry-header{
+		ul{
+			@extend h1;
+			&:after{
+				display: none;
 			}
-			a{
+			li{
 				position: relative;
-				display: block;
-				padding: 15px 15px;
-				&:not(.collapsed){
-					.fa{
-						transform: rotate(90deg);
+				&:not(:last-child){
+					&:before{
+						@extend .claf;
+						content: "/";
+						left: inherit;
+						width: auto;
+						right: -22.5px;
 					}
 				}
-			}
-			span{
-				vertical-align: middle;
-				display: block;
-				@media (min-width: 992px) {
-					max-width: 220px;
-				}
-				@media (max-width: 992px) {
-					max-width: 240px;
-					margin: auto;
-				}
-
-			}
-			.fa{
-				position: absolute;
-				@extend .trans-v-center;
-				width: 18px;
-				text-align: center;
-				height: 18px;
-				right: 15px;
-				font-size: 18px;
-				transform-origin: 70% 30%;
-				display: inline-block;
-				transition: all 0.3s ease;
-			}
-			.collapse-content{
-				color: rgba(white, 0.8);
-				position: relative;
-				background-color: $color-1;
-				@extend .hover-underline;
-				li{
-					font-weight: normal;
-					&:hover{
+				&.active{
+					a{
+						background-color: $color-1;
 						color: white;
 					}
+					&:before{
+						color: black;
+					}
+				}
+			}
+			@media (max-width:991px) {
+				li:before{
+					display: none;
 				}
 			}
 		}
+		li{
+			margin: 0 15px;
+			
+		}
+		a{
+			padding: 5px 7px;
+			//display: block;
+		}
 	}
 }
-
-
-
-//catalog
-.catalog{
-	background-color: white;
-	border-radius: 15px;
-	.select2{
-		width: 100%;
-	}
-}
-.catalog-items{
-	.img{
-		height: 120px;
-		background-size: contain;
-		background-position: center;
-	}
+.short-place-items{
+	margin-left: -15px;
+	margin-right: -15px;
 	.wrapper{
-		border: 1px solid rgba(black, 0.2);
-		border-radius: 15px;
-		padding: 15px;
-		background-color: white;
-		min-height: 320px;
-	}
-	.desc-content{
-		min-height: 110px;
-	}
-	h5{
-
-	}
-}
-.border-def{
-	border-radius: 15px;
-	border: 1px solid rgba(black, 0.2);
-}
-//catalog-article
-.catalog-article{
-	border-radius: 15px;
-	background-color: white;
-	padding: 0 15px;
-}
-.catalog-article-carousel{
-	@extend .border-def;
-	background-color: white;
-	overflow: hidden;
-	figure{
-	}
-	.img{
-		background-size: contain;
-		background-position: center;
-		height: 340px;
-	}
-	.flickity-prev-next-button svg{
-		transform: scale(0.8);
-	}
-}
-.catalog-article-desc{
-	.pie-flex-center{
-		border-radius: 15px;
-		position: relative;
-		border: 1px solid rgba(black, 0.2);
 		padding: 0 15px;
-		height: 340px;
-		overflow: hidden;
 	}
-	.btn-def{
-		border-radius: 0;
-		width: 100%;
-		left: 0;
-		a{
-			padding: 10px 10px;}
-		font-size: 1.2em;
-		font-weight: 600;
-		bottom: 0;
-		position: absolute;
+	.img{
+		transition: all 0.5s ease;
+		height: 269px;
+		background-size: contain;
+		background-size: cover;
+		background-position: center bottom;
 	}
-}
-
-
-.catalog-article-tabs{
-	@extend .border-def;
-	.wrapper{
-		overflow: hidden;
-		border-radius: 15px;
-		background-color: white;
-	}
-	li.active{
-		a{
-			border: none !important;
-			border-radius: 0 !important;
-			background-color: $color-1 !important;
-			color: white !important;
-		}
-	}
-	.nav{
-		background-color: white;
-	}
-	.tab-content{
-		padding: 20px 0;
-	}
-	ul{
-		display: flex;
-	}
-	li{
-		border: 1px solid rgba($color-gray-2, 0.4);
-		text-align: center;
-		display: inline-block;
-		float: none;
-    flex-basis: 100%;
-		a{
-			margin: 0;
-			height: 100%;
-		}
-	}
-	@media (max-width: 991px) {
-		ul{
-			flex-wrap: wrap;
-		}
-	}
-	@media (min-width: 992px) {
-		white-space: nowrap;
-	}
-}
-p{
-	font-family: $font-family-2;
-}
-
-//--about
-.about{
-	.text-content{
-		column-count: 2;
-	}
-}
-@keyframes brightnessPulse{
-	to, from{
-		filter: brightness(100%);
-	}
-	50%{
-		filter: brightness(130%);
-	}
-}
-.short-advantages-items{
 	figure{
-		font-size: 0.98em;
-		padding: 0 10px;
-		width: 100%;
 		&:hover{
-			.img-content{
-				animation: brightnessPulse 2s ease-in-out infinite;
+			.img{
+				box-shadow: 0 0 20px -7px black;
+				filter: brightness(110%) contrast(105%);
+				//transform: scale(0.9);
 			}
 		}
 	}
+
 }
-//--partners
-.partners-items{
-	figure{
-		.img{
-			background-size: contain;
-			background-position: center;
-			height: 170px;
-		}
+//.short-advantages
+.short-advantages{
+	background-color: $color-gray-1;
+}
+.short-advantages-items{
+	.boxes-cell{
+		margin: 30px 0;
 	}
 }
-.color-discount{
-	font-weight: 700;
-	font-size: 1.3em;
-	color: #e53935;
+.short-advantages-cnt{
+	font-size: 30px;
+	font-weight: 600;
+	color: $color-1;
 }
-
-
-
-.contacts{
-	.container{
-		background-repeat: no-repeat;
-	}
-}
+.short-advantages-bg{
+	//width: 40vw;
+	width: calc(50vw + #{(1140/4)+px} );
+	left: ((100/12)*7)+%;
+	position: absolute;
+	background-size: cover;
+	height: 100%;
+	background-position: center;
+}	

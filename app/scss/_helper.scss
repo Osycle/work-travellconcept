@@ -275,7 +275,7 @@ html{
 .align-items-center{
 	align-items: center;
 	&>span, &>b{
-		width: 100% !important;
+		width: 100%;
 		text-align: center;
 		display: block;
 	}

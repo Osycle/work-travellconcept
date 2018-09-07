@@ -489,6 +489,69 @@ table {
 	}
 }
 
+[class*='flexboxes']{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	figure, .flexboxes-item{
+		display: inline-block;
+	}
+}
+.flexboxes-1{
+	figure, .flexboxes-item{
+		flex-basis: (100/1)+%;
+	}
+}
+.flexboxes-2{
+	figure, .flexboxes-item{
+		flex-basis: (100/2)+%;
+	}
+}
+.flexboxes-3{
+	figure, .flexboxes-item{
+		flex-basis: (100/3)+%;
+	}
+}
+.flexboxes-4{
+	figure, .flexboxes-item{
+		flex-basis: (100/4)+%;
+	}
+}
+.flexboxes-5{
+	figure, .flexboxes-item{
+		flex-basis: (100/5)+%;
+	}
+}
+.flexboxes-6{
+	figure, .flexboxes-item{
+		flex-basis: (100/6)+%;
+	}
+}
+@media ( max-width:991px ){
+	.flexboxes-2{
+		figure, .flexboxes-item{
+			flex-basis: (100/1)+%;
+		}
+	}
+	.flexboxes-3, .flexboxes-4, .flexboxes-5{
+		figure, .flexboxes-item{
+			flex-basis: (100/2)+%;
+		}
+	}
+	.flexboxes-5, .flexboxes-6{
+		figure, .flexboxes-item{
+			flex-basis: (100/3)+%;
+		}
+	}
+}
+@media ( max-width: 420px ){
+	.flexboxes-3, .flexboxes-4, .flexboxes-5, .flexboxes-5, .flexboxes-6{
+		figure, .flexboxes-item{
+			flex-basis: (100/1)+%;
+		}
+	}
+}
 .cell-hover{
 	opacity: 0;
 	padding: 0 5%;
@@ -499,6 +562,9 @@ table {
 	background-color: rgba(black, 0.5);
 	display: flex;
 	align-items: center;
+	*{
+		pointer-events: auto;
+	}
 }
 
 
@@ -516,6 +582,9 @@ table {
 		padding: 0 5%;
 		&>div{
 			width: 100%;
+		}
+		*{
+			pointer-events: auto;
 		}
 	}
 	&:hover{
@@ -564,6 +633,7 @@ table {
 	display: block;
 	white-space: nowrap;
 	//border-radius: 20px;
+	text-transform: uppercase;
 	text-align: center;	
 	font-weight: 600;
 	font-family: $font-family-1;
@@ -769,8 +839,8 @@ body{
 	//height: auto;
 	background-color: white;
 	background-image: url('../img/bg/bg-body.jpg');
-	//background-size: cover;
 	background-repeat: repeat-y;
+	//background-size: cover;
 }
 
 
@@ -843,22 +913,27 @@ label{
 	margin-bottom: 0;
 }
 .h1-style{
-	&:before{
+	&:after{
 		@extend .claf;
-		width: 45px;
-		height: 5px;
-		background-color: currentColor;
-		left: 0;
-		top: inherit;
+		z-index: -1;
+		height: 1px;
+		width: 50px;
+		transition: all 0.5s ease;
+		background-color: $color-1;
 		bottom: 0;
-		@media ( max-width:991px ){
-			left: 50%;
-			transform: translateX(-50%);
+    position: relative;
+    display: block;
+    top: inherit;
+    margin: 10px auto;
+	}
+	&[align="left"]{
+		&:after{
+			margin-left: 0;	
 		}
 	}
-	&.before-color-1{
+	&.before-color-2{
 		&:before{
-			background-color: $color-1;
+			background-color: $color-2;
 		}
 	}
 }
@@ -871,13 +946,14 @@ h1,h2,h3,h4,h5{
 h1, h2, h3, h4{
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-weight: 600;
+	font-weight: 700;
 	position: relative;	
 }
 h1{
+	@extend .h1-style;
 	line-height: 125%;
-	color: $color-1;
-	font-size: em(30, 15);
+	text-transform: uppercase;
+	font-size: em(25, 15);
 	margin-bottom: 15px;
 	font-weight: 700;
 	@media (max-width: 430px) {
@@ -886,23 +962,21 @@ h1{
 }
 h2{
 	color: $color-1;
-	font-weight: 700;
-	font-size: em(24, 15);
+	font-size: em(21, 15);
 	margin-bottom: 15px;
 	@media (max-width: 430px) {
 		font-size: em(25/1.2, 15);
 	}
 } 
 h3{
-	font-weight: 700;
-	font-size: em(20, 15);
+	font-size: em(18, 15);
 	@media (max-width: 430px) {
 		font-size: em(20/1.1, 15);
 	}
 }
 h4{
-	font-weight: 700;
-	font-size: em(17, 15);
+	text-transform: uppercase;
+	font-size: em(15, 15);
 }
 h5{	
 	line-height: 150%;

@@ -44,7 +44,7 @@ $header-min-menu: 70px;
 	z-index: 110;
 	right: 0;
 	left: 0;
-	position: relative;
+	position: fixed;
 	pointer-events: none;
 	background-color: transparent;
 	*{
@@ -62,10 +62,10 @@ $header-min-menu: 70px;
 
 .header-hidden{
 	//position: relative;
-	height: 100px;
+	height: 180px;
 	background-color: transparent;
 	transition: height 0.3s ease-in-out 0.4s;
-	display: none;
+	//display: none;
 	@media ( max-width: 991px ){
 		height: 70px;
 		display: block;
@@ -83,35 +83,62 @@ $header-min-menu: 70px;
 .header-top, .header-bottom{
 	transform: inherit;transform: unset;
 }
+.header-bottom{
+	position: relative;
+		background-image: url('../img/bg/bg-body.jpg');
+	background-repeat: repeat-y;
+	top: 0;
+}
+.header-top-content{
+	height: 60px;
+}
+.header-bottom-content{
+	height: 120px;
+}
+.header-logo img{
+	width: 272px;
+}
+.header-scroll{
 
-// .header-scroll{
-// 	.header-top{
-// 		.menu{
-// 			transition: all 0.5s ease; 	
-// 			transform-origin:50% 0;
-// 		}
-// 	}
-// 	&.scrolled, &.header-pages{
-// 		.header-top{
-// 			box-shadow: 0px 5px 20px -10px black;
-// 			.menu{
-// 				height: 60px;
-// 			}
-// 		}
-// 		.header-middle{
-// 			transform: rotateX(-90deg) perspective(1500px) ;	
-// 		}
-// 		.header-bottom{
-// 			top: -130px;
-// 			box-shadow: 0px 5px 20px -10px black;
-// 		}
-// 	}
-// }
+	.header-top{
+		transform-origin: 50% 0;
+	}
+	.header-top, .header-bottom, .header-bottom-content, .header-logo img{
+		transition: all 0.5s ease; 	
+	}
+	&.scrolled, &.header-pages{
+		.header-top{
+			box-shadow: 0px 5px 20px -10px black;
+			transform: rotateX(-90deg) perspective(1500px) ;	
+			.menu{
+				height: 60px;
+			}
+		}
+		.header-logo{
+			img{
+				width: 50%;
+			}
+		}
+		.header-bottom{
+			top: -60px;
+			box-shadow: 0px 5px 20px -10px black;
+			.header-bottom-content{
+				height: 60px;
+			}
+		}
+	}
+}
 
 
 .header-lang{
 	.active{
 		color: $color-1;
+	}
+	a{
+		transition: all 0.3s ease;
+		&:hover{
+			color: rgba($color-1, 0.5);
+		}
 	}
 }
 .logo{
@@ -122,7 +149,7 @@ $header-min-menu: 70px;
 
 
 .menu{
-	text-align: center;
+	font-weight: 500;
 	position: relative;
 	ul:not([class*="sub-menu"]){
 		@extend .letter-none;
@@ -133,7 +160,7 @@ $header-min-menu: 70px;
 			font-size: 1em;
 			& > a{
 				display: block;
-				padding: 15px 15px;
+				padding: 15px 10px;
 				position: relative;
 			}
 			&:hover{
@@ -169,10 +196,10 @@ $header-min-menu: 70px;
 			&:before, &:after{
 				@extend .claf;
 				z-index: -1;
-				height: 2px;
+				height: 1px;
 				transform: scaleX(0);
 				transition: all 0.5s ease;
-				background-color: $color-2;
+				//background-color: $color-2;
 				bottom: 0;
 				top: inherit;
 			}
@@ -183,7 +210,7 @@ $header-min-menu: 70px;
 		}
 		a:hover{
 			&:before, &:after{
-				transform: unset;
+				transform: scaleX(0.4);
 			}
 		}
 
