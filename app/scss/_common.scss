@@ -497,6 +497,14 @@ table {
 	figure, .flexboxes-item{
 		display: inline-block;
 	}
+	&:not(.serried){
+		margin-left: -15px;
+		margin-right: -15px;
+		figure, .flexboxes-item{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 }
 .flexboxes-1{
 	figure, .flexboxes-item{
@@ -915,7 +923,6 @@ label{
 .h1-style{
 	&:after{
 		@extend .claf;
-		z-index: -1;
 		height: 1px;
 		width: 50px;
 		transition: all 0.5s ease;
@@ -924,11 +931,23 @@ label{
     position: relative;
     display: block;
     top: inherit;
-    margin: 10px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 	}
 	&[align="left"]{
 		&:after{
 			margin-left: 0;	
+		}
+	}
+	&[align="center"]{
+		&:after{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&[align="right"]{
+		&:after{
+			margin-right: 0;	
 		}
 	}
 	&.before-color-2{
@@ -959,7 +978,7 @@ h1{
 	@media (max-width: 430px) {
 		font-size: em(33/1.2, 15);
 	}
-}
+}f
 h2{
 	color: $color-1;
 	font-size: em(21, 15);
@@ -969,6 +988,7 @@ h2{
 	}
 } 
 h3{
+	font-weight: 600;
 	font-size: em(18, 15);
 	@media (max-width: 430px) {
 		font-size: em(20/1.1, 15);
