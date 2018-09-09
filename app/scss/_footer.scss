@@ -17,9 +17,86 @@
 	background-position-y: center;
 	background-size: cover;
 	font-size: 0.92em;
+	h3{
+		text-transform: uppercase;
+	}
 }
-.footer-menu{
+.footer-content{
+	.pie-flex-content{
+		flex-wrap: nowrap;
+		@media (max-width: 991px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+.footer-logo{
 	li{
-		margin: 5px 0;
+		span{
+			display: inline-block;
+		}
+		span:first-child{
+			width: 30px; 
+			text-align: center;
+		}
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+
+.soclist{
+	li{
+		margin-right: 10px;
+	}
+	.fa{
+		font-size: 22px;
+	}
+	.fa-whatsapp{
+		font-size: 25px;
+	}
+	.fa-paper-plane{
+		font-size: 20px;
+	}
+}
+.footer-news-items{
+	figure{
+		height: 110px;
+		font-size: 0.9em;
+		a{
+			position: absolute;
+			bottom: 0;
+			color: $color-1;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		.img{
+			background-position: center;
+			background-size: cover;
+			height: 110px;
+		}
+		.desc-content{
+			height: 100%;
+			padding-bottom: 10px;
+		}
+	}
+}
+.footer-destination-items{
+	figure{
+		width: 100%;
+	}
+	.img{
+		background-position: center;
+		background-size: cover;
+		height: 170px;
+	}
+}
+.footer-feedback{
+	textarea{
+		height: 260px;
+	}
+	button{
+		font-weight: 600;
+		text-transform: uppercase;
 	}
 }

@@ -829,7 +829,7 @@ table {
 }
 
 .parag-gray{
-	p{
+	p:not([class*="color"]){
 		color: #757575;
 	}
 }
@@ -921,7 +921,7 @@ label{
 	margin-bottom: 0;
 }
 .h1-style{
-	&:after{
+	&:not(.h-clear):not(.after-not):after{
 		@extend .claf;
 		height: 1px;
 		width: 50px;
@@ -1220,15 +1220,14 @@ hr{
 }
 
 .pie-form-control{
-	border: 1px solid $color-gray-2;
+	border: 0px solid $color-gray-2;
 	//border-bottom-color: white;
-	background-color: transparent;
+	background-color: rgba(white, 0.05);
 	//border-radius: 30px;
 	&:not([class*='color-']){
 		color: inherit;
 		color: currentColor;
 	}
-	border-radius: 20px;
 	@include placeholder-color($color-gray-2);
 	&:focus, &:active{
 		outline: none;
@@ -1238,15 +1237,22 @@ hr{
 input.pie-form-control{
 	height: 34px;
 	padding: 5px 12px;
+
 	&[type="checkbox"]{
 		height: auto;
 		margin-top: 0;
+	}
+	&:not([class*="box-"]):not([class*="col-"]){
+		width: 100%;
 	}
 }
 textarea.pie-form-control{
 	resize: none;
 	padding: 7px 12px;
 	min-height: 120px;
+	&:not([class*="box-"]):not([class*="col-"]){
+		width: 100%;
+	}
 }
 select.pie-form-control{
 	height: 35px;

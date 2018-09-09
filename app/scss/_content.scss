@@ -338,21 +338,9 @@
 		@media (max-width: 991px) {
 			width: 100%;
 			.img{
-				height: 150px;
+				height: 190px;
 			}
 		}
-		// display: block;
-		// width: 25%;
-		// img{
-		// 	height: 200px;
-		// 	padding: 5px;
-		// }
-		// &:nth-child(1){
-		// 	width: 50%;
-		// 	img{
-		// 		height: 400px;
-		// 	}
-		// }
 		.hover-content{
 			overflow: hidden;
 			.img{
@@ -365,5 +353,45 @@
 				}
 			}
 		}
+	}
+}
+
+
+//.short-reviews
+.short-reviews{
+	.short-reviews-items{
+		img{
+			width: 123px;
+			height: 123px;
+		}
+	}
+}
+
+//.short-partners
+.short-partners-items{
+	filter: grayscale(1);
+	transition: filter 0.5s steps(30);
+	&:hover{
+		filter: grayscale(0);
+	}
+	.img{
+		background-position: center;
+		background-size: auto;
+		height: 120px;
+	}
+	figure{
+		padding-left: 15px;
+		padding-right: 15px;
+		width: (100/8)+%;
+		@media (max-width:1199px){
+			width: (100/6)+%;
+		}
+		@media (max-width:991px){
+			width: (100/3)+%;
+		}
+		@media (max-width:450px){
+			width: (90/1)+%;
+		}
+
 	}
 }

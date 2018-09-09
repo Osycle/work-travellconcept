@@ -71,7 +71,7 @@
 		$("#min-menu").mmenu({
 			extensions: [
 				"pagedim-black", // wrapper-bg black
-				"theme-dark",
+				"theme-white",
 				//"theme-white",
 				//"fullscreen",
 				//"listview-50",
@@ -209,16 +209,16 @@
 	    });
 		}
     //short-partners-carousel
-    if ($(".short-partners-carousel .carousel-items figure").length > 5)
+    if ($(".short-partners-carousel .carousel-items figure").length > 8 || checkSm())
       $('.short-partners-carousel .carousel-items').flickity({
         imagesLoaded: true,
         autoPlay: 3000,
         freeScroll: false,
         pauseAutoPlayOnHover: true,
         arrowShape: arrowStyle,
-        initialIndex: 2,
-        prevNextButtons: ($(".short-partners-carousel .carousel-items figure").length > 5),
-        draggable: false,
+        initialIndex: 0,
+        prevNextButtons: checkSm(),
+        draggable: true,
         adaptiveHeight: true, 
         wrapAround: true,
         pageDots: false,
@@ -227,18 +227,18 @@
         cellAlign: 'center'
       });
 
-      $('.catalog-article-carousel .carousel-items').flickity({
+      $('.short-reviews-carousel .carousel-items').flickity({
         imagesLoaded: true,
         autoPlay: 3000,
         freeScroll: false,
         pauseAutoPlayOnHover: true,
-        arrowShape: "M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z",
-        initialIndex: 2,
+        arrowShape: "m 1.3327437,24.333332 -5.896e-4,-1 L 56.332744,23.67244 111.33333,24.011547 132,24.375497 152.66667,24.739447 77,25.036389 1.3333333,25.333332 Z M 2.8835156,22.259639 4,21.555958 19,12.973716 34,4.3914751 37,2.8154925 40,1.2395099 V 1.8531451 2.4667804 L 23.043055,12.23339 6.0861081,21.999999 2.3634916,24.156386 1.3321541,23.333332 Z",
+        initialIndex: 0,
         prevNextButtons: true,
         draggable: false,
         adaptiveHeight: true, 
         wrapAround: false,
-        pageDots: true,
+        pageDots: false,
         contain: true,
         percentPosition: true,
         cellAlign: 'center'

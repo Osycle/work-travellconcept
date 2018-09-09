@@ -235,6 +235,24 @@
 		}
 	}
 }
+.flickity-btn-2{
+	.flickity-prev-next-button{
+		background: transparent;
+		width: 150px;
+    height: 100px;
+    .arrow{
+    	fill: $color-gray-2;
+
+    }
+    &.next{
+    	@media ( min-width:991px ){
+    		svg{
+      		margin-top: -45px;
+    		}
+    	}
+    }
+	}
+}
 .flickity-page-dots{
 	margin: 30px 0;
 	z-index: 1;
