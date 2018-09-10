@@ -79,6 +79,9 @@ $header-min-menu: 70px;
 	//position: fixed;
 	box-shadow: 0 5px 40px -15px rgba(0, 0, 0, 0.8);
 	width: 100%;
+	.btn-def{
+		display: block;
+	}
 }
 .header-top, .header-bottom{
 	transform: inherit;transform: unset;

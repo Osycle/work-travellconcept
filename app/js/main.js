@@ -299,23 +299,32 @@
 
 
 
-		//Адаптивность в моб.версии
-		if(checkSm())
-			$(".column-1").before( $(".column-2") );
-		//Соглания с условиями
-		if( $(["data-checkdeactive"]).length )
-		$("[data-checkdeactive]").map(function( i, el ){
-			var deactiveClass = $($(el).attr("data-checkdeactive"));
-			$(el).on("change",checkedToggle);
-			function checkedToggle(){
-				!el.checked ? deactiveClass.addClass("deactive") : deactiveClass.removeClass("deactive");
-			}
-			checkedToggle();
-		})
+    // Прибавление-убавление значении
+    (function(){
+      var form = $("[data-counter]") || null;;
+      if( !form )
+        return;
+      var cntfactor = form.attr("data-counter")*1;
 
-		$("[data-hidephone]").on("click", function(e){
-			$($(this).attr("data-hidephone")).show()
-		})
+      $(document).on("click", "[data-counter-btn]", function(){
+        var cntVal;
+        var cntInput = $(this).closest( form ).find("[data-counter-input]");
+        
+        cntVal = (cntInput.val()*1);
+
+        if( $(this).hasClass("plus") )
+          cntVal = cntVal + cntfactor;
+        if( $(this).hasClass("minus") & cntVal > 0 )
+          cntVal = cntVal - cntfactor;
+        if( isNaN( cntVal ) || cntVal < 0) cntVal = 0;
+        cntInput.val( cntVal ).attr("value", cntVal)
+      })
+      $(".cnt-input").on( "keypress", function(e){
+        //console.log(this, e);
+      } )
+
+    })();
+
 
 
 
