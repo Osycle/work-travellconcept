@@ -168,6 +168,15 @@ html{
 	}
 }
 
+@for $i from 0 through 8 {
+	.li-m-v-#{5*$i} { 
+		li{
+			margin-top: 5*$i+px;
+			margin-bottom: 5*$i+px;
+		}
+	 	
+	}
+}
 
 //--BOX
 @for $i from 0 through 10 {

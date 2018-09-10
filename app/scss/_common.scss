@@ -761,7 +761,7 @@ table {
 	.pagination{
 		li{
 			display: inline-block;
-			border-radius: 50%;
+			border-radius: 5%;
 			//margin: 0 3px;
 			margin-right: 5px;
 			margin-top: 5px;
@@ -933,6 +933,9 @@ label{
     top: inherit;
     margin-top: 10px;
     margin-bottom: 10px;
+    @media (max-width:991px) {
+    	display: none;
+    }
 	}
 	&[align="left"]{
 		&:after{
@@ -999,6 +1002,7 @@ h4{
 	font-size: em(15, 15);
 }
 h5{	
+	text-transform: uppercase;
 	line-height: 150%;
 	font-weight: 900;
 	font-size: em(13, 15);
