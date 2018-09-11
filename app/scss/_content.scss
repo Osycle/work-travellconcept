@@ -504,6 +504,7 @@
 	}
 }
 
+//createtour
 .products-cnt-form{
 	background-color: $color-gray-1;
 	input{
@@ -511,13 +512,13 @@
 		text-align: center;
 		border: none;
 		height: 100%;
-		margin: 7px 0;
-		width: 50px;
+		margin: 2px 0;
+		width: 20px;
 	}
 	.minus, .plus{
 		border: none;
-		font-size: 25px;
-		padding: 0px 20px;
+		font-size: 20px;
+		padding: 0px 10px;
 		background-color: transparent;
 	}
 	.minus{
@@ -525,5 +526,48 @@
 	}
 	.plus{
 		float: right;
+	}
+}
+
+.createtour-form{
+	textarea, input{
+		border: 1px solid black;
+		background-color: white;
+	}
+
+	.select2-container--default .select2-selection--single{
+		background-color: $color-2;
+		border-color: $color-2;
+		border-radius: 0;
+		height: auto;
+		text-align: center;
+		padding: 7px 0;
+	}
+}
+.preferences{
+	textarea{
+		height: 220px;
+	}
+}
+.createtour-feedback{
+	input{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		height: 40px;
+		display: inline-block;
+		text-align: center;
+	}
+}
+.cnt-human-title{
+	display: inline-block;
+	min-width: 100px;
+}
+.btn-def.big{
+	border-radius: 2px;
+	button{
+		font-weight: 600;
+		font-size: 1.25em;
+		text-transform: uppercase;
+		padding: 17px 85px;
 	}
 }

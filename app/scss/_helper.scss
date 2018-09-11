@@ -177,6 +177,14 @@ html{
 	 	
 	}
 }
+@for $i from 0 through 8 {
+	.li-m-r-#{5*$i} { 
+		li{
+			margin-right: 5*$i+px;
+		}
+	 	
+	}
+}
 
 //--BOX
 @for $i from 0 through 10 {

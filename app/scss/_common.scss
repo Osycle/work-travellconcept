@@ -1068,7 +1068,7 @@ hr{
 		font-size: 1em;
 		//font-weight: 400;
 		position: relative;
-		line-height: 150%;
+		line-height: 160%;
 	}
 	ul:not([class]){
 		text-align: left;
@@ -1252,7 +1252,7 @@ input.pie-form-control{
 }
 textarea.pie-form-control{
 	resize: none;
-	padding: 7px 12px;
+	padding: 10px 12px;
 	min-height: 120px;
 	&:not([class*="box-"]):not([class*="col-"]){
 		width: 100%;
@@ -1293,11 +1293,12 @@ input[type="checkbox"]:checked{
 .checkbox-style-1{
 	width: 10px;
 	height: 10px;
-	display: block;
+	display: inline-block;
 	//transition: all 0.05s ease;
 	background-color: transparent;
 	position: relative;
 	border-radius: 3px;
+	margin-left: 5px;
 	&:hover{
 		cursor: pointer;
 	}
@@ -1316,25 +1317,34 @@ input[type="radio"]:checked{
 		background-color: $color-1;
 	}		
 }
+label{
+	font-weight: 500;
+}
 .radio-style-1{
-	width: 10px;
-	height: 10px;
-	display: block;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
 	//transition: all 0.05s ease;
 	background-color: transparent;
 	position: relative;
-	border-radius: 50%;
+	border: 2px solid $color-1;
 	&:hover{
 		cursor: pointer;
 	}
-	&:before{
-		@extend .claf;
-		@extend .trans-center;
-		width: 18px;
-		height: 18px;
-		border-radius: 50%;
-		border: 2px solid $color-1;
-	}
+	// &:before{
+	// 	@extend .claf;
+	// 	@extend .trans-center;
+	// 	width: 18px;
+	// 	height: 18px;
+	// 	border-radius: 50%;
+	// 	border: 2px solid $color-1;
+	// }
+}
+
+.radio-style-2{
+	@extend .radio-style-1;
+	width: 12px;
+	height: 12px;
 }
 
 
