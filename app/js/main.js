@@ -259,29 +259,28 @@
 						.eq(i)
 						.flickity({
 							imagesLoaded: true,
-							prevNextButtons: false,
+							prevNextButtons: checkSm(),
 							cellAlign: "center",
 							bgLazyLoad: 1,
 							//friction: 1,
 							//selectedAttraction: 1,
-							initialIndex: 1,
+							initialIndex: carouselMain.find(".carousel-cell").length/2,
 							draggable: false,
 							contain: true,
 							pageDots: false
 						});
 					var flkty = crs.data("flickity");
-
 					$(carouselNav).eq(i).flickity({
 						imagesLoaded: true,
-						initialIndex: 1,
+						//initialIndex: 1,
 						asNavFor: $(carouselMain)[i],
-						prevNextButtons: true,
+						prevNextButtons: !checkSm(),
 						draggable: true,
 						percentPosition: true,
 						//wrapAround: true,
 						cellAlign: "center",
 						adaptiveHeight: true,
-						//contain: true,
+						contain: true,
 						pageDots: false
 					});
           $("[data-fancybox]").fancybox({

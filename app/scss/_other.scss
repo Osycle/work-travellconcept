@@ -297,7 +297,6 @@
 .carousel-article{
   position: relative;
   z-index: 1;
-  padding-bottom: 50px;
 	.carousel {
 	  margin-bottom: 20px;
 	}
@@ -312,8 +311,15 @@
 	.carousel-main{
 		.flickity-viewport{
 			border: 1px solid rgba($color-gray-1, 0.2);
-			//border-radius: 15px;
 			overflow: hidden;
+		}
+		.img{
+			background-position: center;
+			background-size: cover;
+			height: 400px;
+			@media (max-width: 991px) {
+				height: 180px;
+			}
 		}
 	}
 	.carousel-nav{
@@ -326,13 +332,17 @@
 	  	margin-right: 10px;
 	  	border: 2px solid transparent;
 	  	transition: all 0.3s ease-out ;
-	  	.img-content{
-	  		transition: all 0.3s ease-out;
-	  		transform: scale(0.8);
-	  	}
-	  	&.is-nav-selected{
-	  	 //border-color: $color-1;
-	  	}
+		}
+  	.img-content{
+  		transition: all 0.3s ease-out;
+  		transform: scale(0.8);
+  	}
+  	&.is-nav-selected{
+  	 //border-color: $color-1;
+  	}
+		.img{
+			background-position: center;
+			background-size: cover;
 		}
 		.is-selected{
 			border-color: rgba($color-3, 1);

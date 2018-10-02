@@ -571,3 +571,71 @@
 		padding: 17px 85px;
 	}
 }
+
+
+.tours-article{
+	.carousel-article{
+		.carousel-nav{
+			.carousel-cell{
+				width: 20%;
+			}
+		}
+	}
+}
+
+.video-content{
+	iframe{
+		height: 480px;
+		width: 100%;
+		@meida (max-width: 991px) {
+			height: 360px;
+		}
+		@meida (max-width: 767px) {
+			height: 280px;
+		}
+		@meida (max-width: 420px) {
+			height: 180px;
+		}
+
+	}
+}
+
+.tour-comments{
+	textarea.pie-form-control{
+		border: 1px solid $color-gray-1;
+		background-color: white;
+		border-radius: 5px;
+		min-height: 85px;
+	}
+	input.pie-form-control{
+		border: 1px solid $color-gray-1;
+		background-color: white;
+		border-radius: 5px;
+	}
+	@media (min-width: 992px) {
+		.user-img{
+			img{
+				width: 100%;
+			}
+		}
+		.input-content{
+			padding-left: 15px;
+		}
+	}
+}
+.tour-comments-items{
+	figure{
+		@extend .clearfix;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		border-top: 1px solid rgba($color-gray-2, 0.5);
+		&:last-child{
+			border-bottom: 1px solid rgba($color-gray-2, 0.5);
+		}
+	}
+	@media (min-width: 992px) {
+		.desc-content{
+			padding-left: 15px;
+		}
+	}
+}
