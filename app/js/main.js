@@ -208,17 +208,17 @@
 	      bnrCarousel.flickity( 'select', index );
 	    });
 		}
-    //short-partners-carousel
-    if ($(".short-partners-carousel .carousel-items figure").length > 8 || checkSm())
-      $('.short-partners-carousel .carousel-items').flickity({
+    //short-places-carousel
+    if ($(".short-places-carousel .carousel-items figure").length > 4 )
+      $('.short-places-carousel .carousel-items').flickity({
         imagesLoaded: true,
-        autoPlay: 3000,
+        autoPlay: 3300,
         freeScroll: false,
         pauseAutoPlayOnHover: true,
         arrowShape: arrowStyle,
         initialIndex: 0,
-        prevNextButtons: checkSm(),
-        draggable: true,
+        prevNextButtons: true,
+        draggable: false,
         adaptiveHeight: true, 
         wrapAround: true,
         pageDots: false,
@@ -321,7 +321,6 @@
       $(".cnt-input").on( "keypress", function(e){
         //console.log(this, e);
       } )
-
     })();
 
 
