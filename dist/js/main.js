@@ -208,8 +208,27 @@
 	      bnrCarousel.flickity( 'select', index );
 	    });
 		}
+    //short-places-carousel
+    if ($(".short-places-carousel .carousel-items figure").length > 4 )
+      $('.short-places-carousel .carousel-items').flickity({
+        imagesLoaded: true,
+        autoPlay: 3300,
+        freeScroll: false,
+        pauseAutoPlayOnHover: true,
+        arrowShape: arrowStyle,
+        initialIndex: 0,
+        prevNextButtons: true,
+        draggable: false,
+        adaptiveHeight: true, 
+        wrapAround: true,
+        pageDots: false,
+        contain: true,
+        percentPosition: true,
+        cellAlign: 'center'
+      });
+
     //short-partners-carousel
-    if ($(".short-partners-carousel .carousel-items figure").length > 8 || checkSm())
+    if ($(".short-partners-carousel .carousel-items figure").length > 8 )
       $('.short-partners-carousel .carousel-items').flickity({
         imagesLoaded: true,
         autoPlay: 3000,
@@ -321,7 +340,6 @@
       $(".cnt-input").on( "keypress", function(e){
         //console.log(this, e);
       } )
-
     })();
 
 

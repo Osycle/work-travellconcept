@@ -81,9 +81,14 @@
 										<li><a href="tours.html" title=>Туры</a></li>
 										<li><a href="directions.html" title=>Направления</a></li>
 										<li><a href="hotels.html" title=>Гостиницы</a></li>
-										<li><a href="restaurant.html" title=>Рестораны</a></li>
-										<li><a href="galleryphoto.html" title=>Фото галерея</a></li>
-										<li><a href="blog.html" title=>Блог</a></li>
+										<li><a href="hotels.html" title=>Рестораны</a></li>
+										<li><a href="javascript:;" title=>Галерея</a>
+											<ul class="sub-menu-1">
+												<li><a href="galleryvideo.html" title="">Видео галерея</a></li>
+												<li><a href="galleryphoto.html" title="">Фото галерея</a></li>
+											</ul>
+										</li>
+										<li><a href="blogs.html" title=>Блог</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -93,17 +98,24 @@
 			</div><!-- ./HEADER BOTTOM -->
 
 		</header>
-		<!-- MIN MENU -->
 		<div id="min-menu" data-aos="fade">
 			<ul>
+				<span class="btn-def box-xs-10">
+					<a href="createtour.html" title="" class="flex align-items-center" style="height:40px;"><span>Создать тур</span></a>
+				</span>
 				<li><a href="index.html" title=>Главная</a></li>
 				<li><a href="contacts.html" title=>Контакты</a></li>
 				<li><a href="tours.html" title=>Туры</a></li>
 				<li><a href="directions.html" title=>Направления</a></li>
 				<li><a href="hotels.html" title=>Гостиницы</a></li>
-				<li><a href="restaurant.html" title=>Рестораны</a></li>
-				<li><a href="galleryphoto.html" title=>Фото галерея</a></li>
-				<li><a href="blog.html" title=>Блог</a></li>
+				<li><a href="hotels.html" title=>Рестораны</a></li>
+				<li><a href="javascript:;" title=>Галерея</a>
+					<ul>
+						<li><a href="galleryvideo.html" title="">Видео галерея</a></li>
+						<li><a href="galleryphoto.html" title="">Фото галерея</a></li>
+					</ul>
+				</li>
+				<li><a href="blogs.html" title=>Блог</a></li>
 				<div class="p-h-15 m-v-30 text-center header-lang">
 					<ul class="list-inline">
 						<li class="active"><a href="" title="">Ru</a></li>/
@@ -150,7 +162,7 @@
 								
 								<div class="col-md-6">
 									<div class="cnt-human m-v-30">
-										<p class="color-1">Сколько человек путешествует с вами?</p>
+										<h4 class="color-1">Сколько человек путешествует с вами?</h4>
 										<div class="m-t-10">
 											<span class="cnt-human-title">Взрослые</span>
 											<span>
@@ -174,7 +186,7 @@
 									</div>
 									<hr class="box-md-6 m-l-0">
 									<div class="m-v-20">
-										<p class="color-1">Размещение в каких гостиницах вы предпочитаете?</p>
+										<h4 class="color-1">Размещение в каких гостиницах вы предпочитаете?</h4>
 										<ul class="list-inline li-m-r-20 m-v-15">
 											<li>
 												<input type="radio" name="type-hotel" class="hide va-middle inline-block p-r-5" id="type-hotel-1">
@@ -201,7 +213,7 @@
 									</div>
 									<hr class="box-md-6 m-l-0">
 									<div class="m-v-20">
-										<p class="color-1">Какой тип комнат вы предпочитаете?</p>
+										<h4 class="color-1">Какой тип комнат вы предпочитаете?</h4>
 										<ul class="list-inline li-m-r-20 m-v-15">
 											<li>
 												<input type="radio" name="type-room" class="hide va-middle inline-block p-r-5" id="type-room-1">
@@ -229,12 +241,12 @@
 									</div>
 									<hr class="box-md-6 m-l-0">
 									<div class="m-v-20">
-										<p class="color-1">В какое время вы планируете свое путешествие?</p>
-										<textarea name="" class="pie-form-control box-md-6 m-t-10" placeholder="Enter information here"></textarea>
+										<h4 class="color-1">В какое время вы планируете свое путешествие?</h4>
+										<textarea name="" class="pie-form-control box-md-6 m-t-10" placeholder="Введите текст"></textarea>
 									</div>
 									<hr class="box-md-6 m-l-0">
 									<div class="m-v-20">
-										<p class="color-1">Какие места вы предпочитаете посетить?</p>
+										<h4 class="color-1">Какие места вы предпочитаете посетить?</h4>
 										<div class="m-v-15 box-md-4">
 											<select name="" class="js-select search-hide box-xs-10 m-h-15">
 												<option>Страны</option>
@@ -253,13 +265,13 @@
 									</div>
 									<hr class="box-md-6 m-l-0">
 									<div class="m-v-20">
-										<p class="color-1">Необходимо ли вам сопровождение гида?</p>
+										<h4 class="color-1">Необходимо ли вам сопровождение гида?</h4>
 										<ul class="li-m-v-5 m-v-15">
 											<li>
 												<input type="radio" name="guide" class="hide va-middle inline-block p-r-5" id="guide-1">
 												<label for="guide-1" role="button">
 													<span class="va-middle radio-style-2"></span>
-													<span class="va-middle p-l-10">Гиднавсеьтур</span>
+													<span class="va-middle p-l-10">Гид на весь тур</span>
 												</label>
 											</li>
 											<li>
@@ -273,7 +285,7 @@
 												<input type="radio" name="guide" class="hide va-middle inline-block p-r-5" id="guide-3">
 												<label for="guide-3" role="button">
 													<span class="va-middle radio-style-2"></span>
-													<span class="va-middle p-l-10">Безсопровождениягида (только водитель без гида</span>
+													<span class="va-middle p-l-10">Без сопровождения гида (только водитель без гида)</span>
 												</label>
 											</li>
 											<li>
@@ -290,25 +302,25 @@
 
 								<div class="col-md-6">
 									<div class="m-v-30 preferences">
-										<p class="color-1">Расскажите нам пожалуйста о своих планах:</p>
+										<h4 class="color-1">Расскажите нам пожалуйста о своих планах:</h4>
 										<p>Есть ли у вас какое-либо особое место которое вы хотите посетить?</p>
 										<p>Как много вы уже запланировали?</p>
 										<p>Есть ли у вас какие либо особые требования к туру?</p>
 										<p>Расскажите нам как можно больше о своих планах и вместе</p>
 										<p>мы создадим программу тура для Вас!</p>
-										<textarea name="" class="pie-form-control m-t-10" placeholder="Enter information here"></textarea>
+										<textarea name="" class="pie-form-control m-t-10" placeholder="Введите текст"></textarea>
 									</div>
 									<hr class="box-md-6 m-l-0">
 									<div class="m-v-20 createtour-feedback clearfix">
-										<p class="color-1">А сейчас расскажите нам немного о себе:</p>
+										<h4 class="color-1">А сейчас расскажите нам немного о себе:</h4>
 										<div class="col-md-4"><input type="text" name="" placeholder="Ваше имя" class="pie-form-control"></div>
-										<div class="col-md-4 col-md-offset-1"><input type="text" name="" placeholder="Ваш имаейл" class="pie-form-control"></div>
-										<div class="col-md-4"><input type="text" name="" placeholder="Ваша Фамилия" class="pie-form-control"></div>
+										<div class="col-md-4 col-md-offset-1"><input type="text" name="" placeholder="Ваш e-mail" class="pie-form-control"></div>
+										<div class="col-md-4"><input type="text" name="" placeholder="Ваша фамилия" class="pie-form-control"></div>
 										<div class="col-md-4 col-md-offset-1"><input type="text" name="" placeholder="Ваша телефон" class="pie-form-control"></div>
 									</div>
 									<hr class="box-md-6 m-l-0">
 									<div class="m-v-20">
-										<p class="color-1">Расскажите нам пожалуйста где вы о нас слышали?</p>
+										<h4 class="color-1">Расскажите нам пожалуйста где вы о нас слышали?</h4>
 										<ul class="li-m-v-5 m-v-15">
 											<li>
 												<input type="radio" name="hearing" class="hide va-middle inline-block p-r-5" id="hearing-1">
@@ -396,7 +408,7 @@
 							</div>
 						</div>
 						<div class="footer-news boxes-1 box-md-4 p-h-15 hover-color-1 hidden-xs hidden-sm">
-							<h3>RECENT NEWS</h4>
+							<h3><a href="news.html" title="" underline>RECENT NEWS</a></h3>
 							<div class="footer-news-items m-t-20 figure-m-v-10">
 								<figure>
 									<div class="img-content col-md-4">

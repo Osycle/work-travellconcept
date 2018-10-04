@@ -338,7 +338,7 @@ $header-min-menu: 70px;
 	z-index: 100;
 	color: white;
 	box-shadow: 0 0 20px 0 black;
-	background-color: darken($color-3, 5%);
+	background-color: white;
 	.min-menu-logo{
 		padding: 12px 0;
 		width: 100%;
@@ -469,7 +469,7 @@ $header-min-menu: 70px;
 }
 .icon-bar{
 	width: 100%;
-	background-color: white;
+	background-color: $color-1;
 	height: 1px;
 	position: relative;
 	display: block;
