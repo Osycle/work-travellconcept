@@ -7878,7 +7878,7 @@ label {
   top: 0; }
 
 .header-top-content {
-  height: 60px; }
+  min-height: 60px; }
 
 .header-bottom-content {
   height: 120px; }
@@ -8904,6 +8904,10 @@ textarea.form-control {
   .footer-logo li span:first-child {
     width: 30px;
     text-align: center; }
+
+.copyright-content {
+  position: absolute;
+  bottom: 0; }
 
 .soclist li {
   margin-right: 10px; }
