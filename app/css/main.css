@@ -8900,14 +8900,18 @@ textarea.form-control {
   margin-top: 15px;
   margin-bottom: 15px; }
   .footer-logo li span {
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: middle; }
   .footer-logo li span:first-child {
     width: 30px;
     text-align: center; }
+    .footer-logo li span:first-child ~ span {
+      width: 80%; }
 
-.copyright-content {
-  position: absolute;
-  bottom: 0; }
+@media (min-width: 992px) {
+  .copyright-content {
+    position: absolute;
+    bottom: 0; } }
 
 .soclist li {
   margin-right: 10px; }

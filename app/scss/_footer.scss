@@ -33,18 +33,24 @@
 	li{
 		span{
 			display: inline-block;
+			vertical-align: middle;
 		}
 		span:first-child{
 			width: 30px; 
 			text-align: center;
+			& ~ span{
+				width: 80%;
+			}
 		}
 		margin-top: 15px;
 		margin-bottom: 15px;
 	}
 }
 .copyright-content{
-  position: absolute;
-  bottom: 0;
+	@media (min-width: 992px) {
+	  position: absolute;
+	  bottom: 0;
+	}
 }
 .soclist{
 	li{
